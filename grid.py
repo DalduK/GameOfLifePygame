@@ -1,16 +1,20 @@
-import random
 import os
+import random
 
 random.seed(os.urandom(512))
+
+
 class Grid:
-    def __init__(self, height,width):
-        self.grid = self.make2DGrid(int(height/20),int(width/20))
-    def updateValues(self, grid):
+    def __init__(self, height, width):
+        self.grid = self.make_2d_grid(int(height / 20), int(width / 20))
+
+    def update_values(self, grid):
         self.grid = grid
-    def getGrid(self):
+
+    def get_grid(self):
         return self.grid
 
-    def make2DGrid(self,rows, colls):
+    def make_2d_grid(self, rows, colls):
         arr = []
         for i in range(colls):
             temp = []
